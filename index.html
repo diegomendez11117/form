@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link href="./src/styles.css" rel="stylesheet" />
+    <!-- Title -->
+    <title>Registro</title>
+  </head>
+
+  <body class="body-background">
+    <section class="register">
+      <section class="register__container shadow-5">
+        <h2 class="color-text">Rocket Simulation Form</h2>
+        <form
+          method="POST"
+          action="https://handlers.education.launchcode.org/request-parrot"
+          class="register__container--form"
+        >
+          <input
+            class="input"
+            name="testName"
+            type="text"
+            placeholder="Test Name"
+          />
+          <label class="label">Test Date</label>
+          <input type="date" name="testDate" class="date" />
+          <label class="label">Rocket Type</label>
+          <select name="rocketType" class="select">
+            <option value="1">* Select One *</option>
+            <option value="3">Simulation</option>
+            <option value="2">Rocket Test</option>
+            <option value="3">Crew Related</option>
+          </select>
+          <button type="submit" class="button">Run Simulation</button>
+        </form>
+      </section>
+    </section>
+  </body>
+
+  <footer class="footer">
+    <a href="/">Use Terms</a>
+    <a href="/">Privacy Declaration</a>
+    <a href="/">Help Center</a>
+  </footer>
+</html>
