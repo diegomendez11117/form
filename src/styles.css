@@ -68,46 +68,99 @@ body {
 .label {
   color: rgba(255, 255, 255, 0.95);
   font-family: 'Muli', 'sans-serif';
-  padding: 0px 0px 0px 10px ;
+  padding: 0px 0px 0px 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 .date {
   background-color: rgba(255, 255, 255, 0.2);
   transition: all 0.2s ease-in-out;
   box-shadow: 0px 0px 10px #8d8d8d;
-  border: 0px;
+  border: 1px solid #e8eaed;
   border-radius: 10px;
   height: 40px;
-  margin-top: 5px;
   color: white;
   font-size: 16px;
   color: white;
   font-family: 'Muli', 'sans-serif';
   outline: none;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.radio {
+  vertical-align: baseline;
+  margin-right: 10px;
+  padding: 0px 0px 0px 10px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+input[type="radio"]{
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Muli', 'sans-serif';
+  margin: 0 10px 0 10px;
 }
 
 .select {
+  position: relative;
+  min-width: 200px;
+  margin-bottom: 10px;
+}
+.select svg {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 3px);
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+
+  stroke: rgb(234, 237, 240);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.select select {
+  -webkit-appearance: none;
   background-color: rgba(255, 255, 255, 0.2);
   transition: all 0.2s ease-in-out;
-  box-shadow: 0px 0px 10px #8d8d8d;
-  border: 0px;
+  padding: 7px 40px 7px 12px;
+  width: 100%;
+  border: 1px solid #e8eaed;
   border-radius: 10px;
-  height: 40px;
-  margin-top: 5px;
-  color: white;
+  box-shadow: 0 1px 3px -2px #f1f2f3;
+  cursor: pointer;
+  font-family: inherit;
   font-size: 16px;
+  transition: all 150ms ease;
   color: white;
-  font-family: 'Muli', 'sans-serif';
-  outline: none;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
+}
+.select select:required:invalid {
+  color: rgba(255, 255, 255, 0.95);
+}
+.select select option {
+  color: #16171a;
+}
+.select select option[value=''][disabled] {
+  display: none;
+}
+
+.select select:hover + svg {
+  stroke: rgb(234, 237, 240);
+}
+.sprites {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .button:hover {
   transition: all 0.2s ease-in-out;
-  box-shadow: 1px 1px 12px #666666;
+  box-shadow: 1px 1px 12px #fffefe;
 }
 
 .register {
@@ -144,8 +197,6 @@ body {
 .register__container--form label {
   font-size: 14px;
 }
-
-
 
 .Error-Page__container--404 {
   font-size: 100px;
@@ -199,7 +250,6 @@ body {
     box-shadow: none;
   }
 }
-
 
 .shadow-5 {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),

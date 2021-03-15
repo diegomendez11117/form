@@ -33,12 +33,40 @@
           <label class="label">Test Date</label>
           <input type="date" name="testDate" class="date" />
           <label class="label">Rocket Type</label>
-          <select name="rocketType" class="select">
-            <option value="1">* Select One *</option>
-            <option value="3">Simulation</option>
-            <option value="2">Rocket Test</option>
-            <option value="3">Crew Related</option>
-          </select>
+
+          <label class="select" for="slct"
+            ><select id="slct" name="rocketType" required="required">
+              <option value="" disabled="disabled" selected="selected">
+                Select option
+              </option>
+              <option value="1">Brant</option>
+              <option value="2">Lynx</option>
+              <option value="3">Orion</option>
+              <option value="4">Terrier</option></select
+            ><svg>
+              <use xlink:href="#select-arrow-down"></use></svg></label
+          ><svg class="sprites">
+            <symbol id="select-arrow-down" viewbox="0 0 10 6">
+              <polyline style="color: white" points="1 1 5 5 9 1"></polyline>
+            </symbol>
+          </svg>
+          <input
+            class="input"
+            name="boosterCount"
+            type="number"
+            placeholder="Number of Rocket Boosters"
+            min="0"
+            max="10"
+          />
+          <label class="label" >Wind Rating</label>
+          <span class="radio"><input type="radio" class="radio-label" name="windRating" value="0">No Wind</input></span>
+          <span class="radio"><input type="radio" class="radio-label" name="windRating" value="10">Mild Wind</input></span>
+          <span class="radio"><input type="radio" class="radio-label" name="windRating" value="20">Strong Wind</input></span>
+          
+          
+          <label class="label" >Use production grade servers<input type="checkbox" name="productionServers"></label>
+          
+
           <button type="submit" class="button">Run Simulation</button>
         </form>
       </section>
